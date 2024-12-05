@@ -2,12 +2,12 @@ pipeline {
     agent any
 
     stages {
-        stage('Checkout') {
-            steps {
+       // stage('Checkout') {
+       //     steps {
                 // Checkout the code from the Git repository
-                git 'https://github.com/Kuramayya/playwright-cucumber.git'
-            }
-        }
+        //        git 'https://github.com/Kuramayya/playwright-cucumber.git'
+        //    }
+        //}
         stage('Build') {
             steps {
                 // Clean and package the project
