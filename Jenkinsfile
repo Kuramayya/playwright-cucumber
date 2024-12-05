@@ -2,6 +2,7 @@ pipeline {
     agent any
     tools { 
     		maven 'Maven 3.6.3' // Name configured in the Global Tool Configuration
+            chromium 'Chromium'
     	}
 
     stages {
