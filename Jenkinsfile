@@ -15,17 +15,6 @@ pipeline {
         //        git 'https://github.com/Kuramayya/playwright-cucumber.git'
         //    }
         //}
-        stage('Install Chrome') { 
-            steps { // Install Chrome 
-                sh ''' #!/bin/bash 
-                # Add Google's official repository to your package manager 
-                wget -q -O - https://dl.google.com/linux/linux_signing_key.pub | sudo apt-key add - 
-                echo "deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main" | sudo tee /etc/apt/sources.list.d/google-chrome.list 
-                # Update the package list and install Chrome 
-                sudo apt-get update 
-                sudo apt-get install -y google-chrome-stable ''' 
-            } 
-        }
         stage('Build') {
             steps {
                 // Clean and package the project
