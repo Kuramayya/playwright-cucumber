@@ -5,7 +5,7 @@ pipeline {
         stage('Checkout') {
             steps {
                 // Checkout the code from the Git repository
-                git 'https://github.com/your-repo/your-project.git'
+                git 'https://github.com/Kuramayya/playwright-cucumber.git'
             }
         }
         stage('Build') {
