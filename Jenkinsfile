@@ -10,12 +10,11 @@ pipeline {
         //        git 'https://github.com/Kuramayya/playwright-cucumber.git'
         //    }
         //}
-        stage('Install Chromium') { 
-       steps { 
-           // Install Chromium using Playwright CLI 
-           sh 'npx playwright install chrome' 
+       stage('Install Chromium') { 
+           steps { // Install Chromium using Playwright CLI via Maven 
+               sh 'mvn exec:java -Dexec.mainClass="com.microsoft.playwright.CLI" -Dexec.args="install chromium"' 
+           } 
        }
-   }
         stage('Build') {
             steps {
                 // Clean and package the project
