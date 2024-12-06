@@ -3,10 +3,10 @@ pipeline {
     tools { 
     		maven 'Maven 3.6.3' // Name configured in the Global Tool Configuration
     	}
-    environment { // If you need to set any environment variables, you can define them here 
-        PLAYWRIGHT_SKIP_BROWSER_DOWNLOAD = '1'
+   // environment { // If you need to set any environment variables, you can define them here 
+   //     PLAYWRIGHT_SKIP_BROWSER_DOWNLOAD = '1'
 
-    }
+   // }
 
     stages {
        // stage('Checkout') {
