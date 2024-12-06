@@ -3,13 +3,6 @@ pipeline {
     tools { 
     		maven 'Maven 3.6.3' // Name configured in the Global Tool Configuration
     	}
-   stage('Install Chromium') { 
-       steps { 
-           // Install Chromium using Playwright CLI 
-           sh 'npx playwright install chrome' 
-       }
-   }
-
     stages {
        // stage('Checkout') {
        //     steps {
@@ -17,6 +10,12 @@ pipeline {
         //        git 'https://github.com/Kuramayya/playwright-cucumber.git'
         //    }
         //}
+        stage('Install Chromium') { 
+       steps { 
+           // Install Chromium using Playwright CLI 
+           sh 'npx playwright install chrome' 
+       }
+   }
         stage('Build') {
             steps {
                 // Clean and package the project
